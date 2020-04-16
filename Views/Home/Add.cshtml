@@ -1,0 +1,37 @@
+<partial name="_Navigation"></partial>
+<div class="container">
+@model User
+
+<div class="col-lg-6">
+    <h1>
+        Add a User
+    </h1>
+    <form asp-action="Create" class="form-group" method="post">
+        <p>
+            <p><span asp-validation-for="FirstName"></span></p>
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" class="form-control">
+        </p>
+        <p>
+            <p><span asp-validation-for="LastName"></span></p>
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" class="form-control">
+        </p>
+        <p>
+            <p><span asp-validation-for="Email"></span></p>
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control">
+        </p>
+        <p>
+            <p><span asp-validation-for="Password"></span></p>
+            <label asp-for="Password"></label>
+            <input asp-for="Password" class="form-control">
+        </p>
+        <p>
+            <input type="submit" class="btn btn-success">
+            <a asp-action="Index" class="btn btn-primary">GO Back</a>
+
+        </p>
+    </form>
+</div>
+</div>
